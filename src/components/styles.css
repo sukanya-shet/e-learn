@@ -1,0 +1,41 @@
+nav {
+  min-height: 10vh;
+  background: rgb(20, 16, 16);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-links {
+  min-height: 10vh;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.navbar {
+  box-shadow: 0 2px 5px black;
+}
+.nav-item {
+  text-decoration: none;
+}
+.navbar-nav {
+  float: right;
+}
+.footer {
+  min-height: 12vh;
+  background-color: #252526;
+  color: rgb(192, 192, 192);
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  color: rgb(192, 192, 192);
+  padding: 10px;
+}
