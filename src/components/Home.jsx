@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.css";
-import LocalLibraryIcon from "@material-ui/icons/LocalLibrary";
 import { Link } from "react-router-dom";
 
 function Home() {

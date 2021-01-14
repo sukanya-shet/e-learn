@@ -25,7 +25,7 @@ nav {
 }
 .footer {
   min-height: 12vh;
-  background-color: #252526;
+  background-color: rgb(49, 48, 48,0.8);
   color: rgb(192, 192, 192);
   display: flex;
   position: fixed;

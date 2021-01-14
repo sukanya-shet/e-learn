@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import "./linksave.css";
+import Header from "/src/components/Header";
+import Footer from "/src/components/Footer";
 
 function LinkSave() {
   const [link, setLink] = React.useState({
@@ -36,8 +38,7 @@ function LinkSave() {
 
   return (
     <Fragment>
-      <div>Hello world!</div>
-
+      <Header/>
       <div class="container links">
         <div class="row">
           <div class="col-md-4">
@@ -124,6 +125,7 @@ function LinkSave() {
           </div>
         </div>
       </div>
+      <Footer />
     </Fragment>
   );
 }

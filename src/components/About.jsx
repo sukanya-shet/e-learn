@@ -1,9 +1,11 @@
 import React from "react";
 import "./about.css";
+import Header from "/src/components/Header";
 
 function About() {
   return (
     <div className="about">
+      <Header />
       <section id="contact">
         <div class="container">
           <h1>Get in touch</h1>
