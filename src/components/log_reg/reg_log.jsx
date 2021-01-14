@@ -4,7 +4,10 @@ import "./reg_log.css";
 function RegLog() {
   const [isLogin, setLogin] = React.useState(true);
   const [isReg, setReg] = React.useState(false);
-  const [role,setRole] = React.useState(false);
+  const [credentials, setCred] = React.useState({
+    username: "",
+    password: ""
+  });
 
   function showLogin() {
     setLogin(true);
@@ -14,16 +17,37 @@ function RegLog() {
     setReg(true);
     setLogin(false);
   }
-  function selectRole(event){
-    event.preventDefault();
-    if(event.target.style.boxShadow===""){
-      event.target.style.boxShadow="0 2px 10px";
-    }
-    else{
-      event.target.style.boxShadow="";
-    }
-    
+  function LoginSubmit(event) {
+    console.log(credentials);
+    fetch('http://127.0.0.1:8000/auth/',{
+      method:'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(credentials)
+    }).then(data => data.json())
+    .then(
+data =>{
+  console.log(data.token);
+}
+    ).catch(error =>console.error(error));
+  
   }
+  function changeHandler(event) {
+    const { name, value } = event.target;
+    setCred((prev) => {
+      if (name === "lusername") {
+        return {
+          username: value,
+          password: prev.password
+        };
+      } else if (name === "lpassword") {
+        return {
+          username: prev.username,
+          password: value
+        };
+      }
+    });
+  }
+
 
   return (
     <div class="container">
@@ -46,7 +70,93 @@ function RegLog() {
                 <h4>Register</h4>
               </div>
             </div>
-            <div className="card">{isLogin ? <Login /> : <Register />}</div>
+            <div className="card">{isLogin ? 
+            //------------LOGIN PART-----------//
+             (<div className="login">
+             <form method="post" onSubmit={(e) => e.preventDefault()}>
+               <h1>Login</h1>
+               <input
+                 onChange={changeHandler}
+                 className="form-comp"
+                 type="text"
+                 placeholder="Username"
+                 name="lusername"
+                 minLength="2"
+                 id="lname"
+                 value={credentials.username}
+               />
+     
+               <input
+                 onChange={changeHandler}
+                 className="form-comp"
+                 type="password"
+                 placeholder="Password"
+                 name="lpassword"
+                 id="lpassword"
+                 minLength="4"
+                 value={credentials.password}
+               />
+     
+               <button
+                 onClick={LoginSubmit}
+                 className="reg_log_button"
+                 type="submit"
+               >
+                 Login
+               </button>
+               <a
+                 align="center"
+                 href="/register"
+                 style={{
+                   color: "rgb(58, 135, 155)",
+                   marginLeft: "10px",
+                   marginBottom: "20px"
+                 }}
+               >
+                 Forgot password?
+               </a>
+             </form>
+           </div>
+         ) : 
+         //----------REGISTRATION--------//
+         (
+            <div className="register">
+              <form method="post" onSubmit={(event) => event.preventDefault()}>
+                <h1>Register</h1>
+                
+                <input
+                  className="form-comp"
+                  type="text"
+                  placeholder="Username"
+                  id="rname"
+                />
+                <input
+                  className="form-comp"
+                  type="text"
+                  placeholder="Email"
+                  id="rmail"
+                />
+      
+                <input
+                  className="form-comp"
+                  type="password"
+                  placeholder="Password"
+                  id="rpassword"
+                />
+      
+                <input
+                  className="form-comp"
+                  type="password"
+                  placeholder="Confirm Password"
+                  id="rpassword2"
+                />
+      
+                <button className="reg_log_button" type="submit">
+                  Register
+                </button>
+              </form>
+            </div>)
+        }</div>
           </div>
         </div>
         <div class="col-md-6">
@@ -61,146 +171,6 @@ function RegLog() {
       </div>
     </div>
   );
-
-  function Login() {
-    return (
-      <div className="login">
-        <form method="post">
-          <h1>Login</h1>
-          <div
-            align="center"
-            style={{ color: "rgba(146, 146, 146,0.4)", marginTop: "20px" }}
-          >
-            YOUR ROLE?
-          </div>
-          <div align="center" className="role">
-            <span>
-              <figure >
-                <img
-                  id="teacher"
-                  src="https://img.icons8.com/color/48/000000/female-teacher.png"
-                  alt="teacher"
-                  onClick={selectRole}
-                
-                />
-                <figcaption>Teacher</figcaption>
-              </figure>
-            </span>
-            <span>
-              <figure>
-                <img
-                  id="student"
-                  src="https://img.icons8.com/color/48/000000/student-male--v1.png"
-                  alt="student"
-                  onClick={selectRole}/>
-                <figcaption>Student</figcaption>
-              </figure>
-            </span>
-          </div>
-
-          <input
-            className="form-comp"
-            type="text"
-            placeholder="Username"
-            id="lname"
-          />
-
-          <input
-            className="form-comp"
-            type="password"
-            placeholder="Password"
-            id="lpassword"
-          />
-
-          <button className="reg_log_button" type="submit">
-            Login
-          </button>
-          <a
-            align="center"
-            href="/register"
-            style={{
-              color: "rgb(58, 135, 155)",
-              marginLeft: "10px",
-              marginBottom: "20px"
-            }}
-          >
-            Forgot password?
-          </a>
-        </form>
-      </div>
-    );
-  }
-
-  function Register() {
-    return (
-      <div className="register">
-        <form method="post">
-          <h1>Register</h1>
-          <div
-            align="center"
-            style={{ color: "rgba(146, 146, 146,0.4)", marginTop: "20px" }}
-          >
-            YOUR ROLE?
-          </div>
-          <div align="center" className="role">
-            <span>
-              <figure>
-                <img
-                  id="teacher"
-                  src="https://img.icons8.com/color/48/000000/female-teacher.png"
-                  alt="teacher"
-                  onClick={selectRole}
-                />
-                <figcaption>Teacher</figcaption>
-              </figure>
-            </span>
-            <span>
-              <figure>
-                <img
-                  id="student"
-                  src="https://img.icons8.com/color/48/000000/student-male--v1.png"
-                  alt="student"
-                  onClick={selectRole}
-                />
-                <figcaption>Student</figcaption>
-              </figure>
-            </span>
-          </div>
-
-          <input
-            className="form-comp"
-            type="text"
-            placeholder="Username"
-            id="rname"
-          />
-          <input
-            className="form-comp"
-            type="text"
-            placeholder="Email"
-            id="rmail"
-          />
-
-          <input
-            className="form-comp"
-            type="password"
-            placeholder="Password"
-            id="rpassword"
-          />
-
-          <input
-            className="form-comp"
-            type="password"
-            placeholder="Confirm Password"
-            id="rpassword2"
-          />
-
-          <button className="reg_log_button" type="submit">
-            Register
-          </button>
-        </form>
-      </div>
-    );
-  }
 }
 
 export default RegLog;
