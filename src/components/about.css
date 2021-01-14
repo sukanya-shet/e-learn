@@ -1,0 +1,43 @@
+#contact {
+  background: #efefef;
+  margin-top: 10%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  columns: #777777;
+}
+
+.row {
+  margin-top: 35px;
+}
+.form-group {
+  margin: 5px;
+}
+
+.contact-form {
+  padding: 15px;
+}
+
+.form-control {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+::placeholder {
+  columns: #999999 !important;
+}
+
+.follow {
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.contact-info .fa {
+  margin: 10px;
+  color: #007bff;
+  font-weight: bold;
+}

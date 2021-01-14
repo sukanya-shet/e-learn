@@ -1,0 +1,93 @@
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://p7.hiclipart.com/preview/356/48/8/multimedia-text-picture-frame-computer-monitor-chalkboard-png-clip-art-image.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #efefef !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  height: 100vh;
+}
+.logo {
+  margin-top: 15%;
+  font-size: 60px;
+}
+
+.logo i {
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.name {
+  font-size: 40px;
+  font-family: "Shadows Into Light", cursive;
+}
+.text {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 25px;
+}
+.more{
+display: flex;
+flex-direction: column;
+position: fixed;
+right: 25px;
+top:50%;
+}
+.more .overlay{
+opacity: 0;
+}
+.more:hover{
+  color:#ffffff;
+}
+.more .overlay:hover{
+  opacity: 1;
+
+}
+i{
+  font-size: 40px;
+}
+
+
+.hustle-button {
+  display: inline;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  border-radius: 200px;
+  font-weight: bold;
+  background: rgb(153, 106, 20);
+  color: white;
+  cursor: pointer;
+  border: 2px solid rgb(153, 106, 20);
+
+}
+
+.hustle-button:hover {
+  background: #ffffff;
+  color: rgb(153, 106, 20);
+  border: none;
+}
+
+.pulsate {
+  animation: pulsate 3s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.3;
+  color: black;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
