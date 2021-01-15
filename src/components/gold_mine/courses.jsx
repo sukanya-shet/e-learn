@@ -157,7 +157,6 @@ function Courses() {
           {bookmark.map((n, index) => (
             <div className="image-container d-flex col-md-3">
               <Card2
-                key={index}
                 image={n.image}
                 title={n.title}
                 keywords={n.keywords}
