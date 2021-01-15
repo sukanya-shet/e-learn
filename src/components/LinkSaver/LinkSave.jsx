@@ -10,15 +10,22 @@ function LinkSave() {
   });
   const [linkList, setLinkArray] = React.useState([]);
 
-  function addHandler(event) {
+  function addHandler() {
     setLinkArray((prev) => {
       return [...prev, link];
     });
+
+    console.log(link);
     setLink({
       linkTitle: " ",
       linkUrl: " "
     });
   }
+  /*
+  React.useEffect(() => {
+    const savedLinks = JSON.parse(localStorage.getItem("saved-links"));
+    setLinkArray(savedLinks);
+  }, []);*/
 
   function addLink(event) {
     setLink((prev) => {
@@ -35,10 +42,13 @@ function LinkSave() {
       }
     });
   }
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem("saved-links", JSON.stringify(items));
+  };
 
   return (
     <Fragment>
-      <Header/>
+      <Header />
       <div class="container links">
         <div class="row">
           <div class="col-md-4">
@@ -112,6 +122,7 @@ function LinkSave() {
             >
               Your Links
             </h2>
+
             <div className="rightLink">
               {linkList.map((linkItem, index) => (
                 <div className="linkshow">
