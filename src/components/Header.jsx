@@ -18,11 +18,7 @@ function Header() {
                 <span class="nav-link">Home</span>
               </li>
             </Link>
-            <Link to="/sign" style={{ textDecoration: "none" }}>
-              <li class="nav-item">
-                <span class="nav-link">Logout</span>
-              </li>
-            </Link>
+
             <Link to="/courses" style={{ textDecoration: "none" }}>
               <li class="nav-item">
                 <span class="nav-link">Gold Mine</span>
@@ -38,9 +34,6 @@ function Header() {
                 <span class="nav-link">Quiz</span>
               </li>
             </Link>
-            <li class="nav-item">
-              <span class="nav-link">Test</span>
-            </li>
             <Link to="/about" style={{ textDecoration: "none" }}>
               <li class="nav-item">
                 <span class="nav-link">About us</span>

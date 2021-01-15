@@ -1,23 +1,29 @@
 import React from "react";
 import "./quiz.css";
+import { Link } from "react-router-dom";
+import Header from "/src/components/Header";
+import Footer from "/src/components/Footer";
 
 function EndQuiz() {
   return (
     <div>
+      <Header />
       <div class="wrapper">
-        <div>
-          <i class="fas fa-award award_icon"></i>
-          <h1 class="userpoints">☆ ☆ ☆</h1>
-          <h3 class="userpoints">
-            Your Points: 7<span class="points"></span> /10
-          </h3>
+        <div class="result" align="center">
+          <h1 style={{ marginTop: "40px" }} class="userpoints">
+            ☆ ☆ ☆
+          </h1>
+          <h2 class="userpoints">
+            Your Score: 4<span class="points"></span> /10
+          </h2>
 
           <h5 class="usertime">
             {" "}
-            Time taken: 30 <span class="time_taken"></span> sec
+            <span class="time_taken"></span>
           </h5>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -20,7 +20,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 90vh;
-  background-color: #421fe0;
+  background-color: #1c1536a1;
 }
 
 .welcome_text {
@@ -56,8 +56,9 @@ body {
   padding: 20px 0;
   border: none;
   border-radius: 100px;
-  background-color: rgb(65, 11, 60);
-  color: #12e70a;
+  background-color: rgb(13, 18, 26);
+  border: 3px solid white;
+  color: rgb(207, 216, 213);
   font-style: bold;
   font-size: 22px;
   transition: 0.4s all;
@@ -153,9 +154,8 @@ body {
   color: #341f97;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
-
 .award_icon {
-  display: block;
+  position: relative;
   font-size: 300px;
   color: #fff;
 }

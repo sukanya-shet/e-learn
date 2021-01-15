@@ -111,3 +111,4 @@ let questions = [
     ]
   }
 ];
+export { questions };

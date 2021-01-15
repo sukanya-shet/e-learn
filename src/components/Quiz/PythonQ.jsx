@@ -1,17 +1,19 @@
 import React from "react";
 import "./quiz.css";
 import { questions } from "./site";
+import { Redirect } from "react-router-dom";
 function PythonQ() {
   let time = 0;
   let mytime = 10;
   let question_count = 1;
-  let points = 6;
+  let points = 0;
 
   const [quest, setQuest] = React.useState(
     "Is Python case sensitive when dealing with identifiers?"
   );
   const [opt, setOpt] = React.useState(0);
   const [userAnswer, setUserAnswer] = React.useState(" ");
+  const [isEnd, setEnd] = React.useState(false);
   let [first, second, third, fourth] = questions[opt].options;
 
   function handleClick(event) {
@@ -23,6 +25,7 @@ function PythonQ() {
     if (opt == questions.length - 1) {
       sessionStorage.setItem("time", time);
       clearInterval(mytime);
+      setEnd(true);
       console.log(question_count);
     } else {
       //let user_answer = document.querySelector("li.option.active").dangerouslySetInnerHTML;
@@ -76,49 +79,52 @@ function PythonQ() {
       };
     }
   }
-
-  return (
-    <div className="quiz">
-      <div class="wrapper">
-        <div class="quiz">
-          <div class="quiz_header">
-            <div class="quiz_user">
-              <h4>
-                Welcome! <span class="name"></span>
-              </h4>
-            </div>
-            <div class="quiz_timer">
-              <span class="time">00:00</span>
-            </div>
-          </div>
-          <div class="quiz_body">
-            <div id="questions">
-              <h3> {questions[opt].question}</h3>
-
-              <div>
-                <li onClick={handleClick} class="option" value="answer">
-                  {first}
-                </li>
-                <li onClick={handleClick} class="option" value={second}>
-                  {second}
-                </li>
-                <li onClick={handleClick} class="option" value={third}>
-                  {third}
-                </li>
-                <li onClick={handleClick} class="option" value={fourth}>
-                  {fourth}
-                </li>
+  if (isEnd) {
+    return <Redirect to="/endquiz" />;
+  } else {
+    return (
+      <div className="quiz">
+        <div class="wrapper">
+          <div class="quiz">
+            <div class="quiz_header">
+              <div class="quiz_user">
+                <h4>
+                  Welcome! <span class="name"></span>
+                </h4>
+              </div>
+              <div class="quiz_timer">
+                <span class="time">{opt}</span>
               </div>
             </div>
+            <div class="quiz_body">
+              <div id="questions">
+                <h3> {questions[opt].question}</h3>
 
-            <button class="btn-next" onClick={next}>
-              Next Question
-            </button>
+                <div>
+                  <li onClick={handleClick} class="option" value="answer">
+                    {first}
+                  </li>
+                  <li onClick={handleClick} class="option" value={second}>
+                    {second}
+                  </li>
+                  <li onClick={handleClick} class="option" value={third}>
+                    {third}
+                  </li>
+                  <li onClick={handleClick} class="option" value={fourth}>
+                    {fourth}
+                  </li>
+                </div>
+              </div>
+
+              <button class="btn-next" onClick={next}>
+                Next Question
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default PythonQ;
