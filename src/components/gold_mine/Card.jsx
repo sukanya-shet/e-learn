@@ -20,7 +20,7 @@ function Card(props) {
         </h6>
         <div className="title">{props.title}</div>
         <div className="descrip">{props.desc}</div>
-        <div className="down">
+        <div className="course-down">
           <a href={props.weblink}>Go to page</a>
           <i
             onClick={() => {

@@ -1,13 +1,14 @@
 import React from "react";
 import "./styles.css";
-import { Link } from "react-router-dom";
 import LocalLibraryIcon from "@material-ui/icons/LocalLibrary";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-          <LocalLibraryIcon /> Seekh
+          <LocalLibraryIcon />
+          Seekh
         </a>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">

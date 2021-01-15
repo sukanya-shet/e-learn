@@ -8,7 +8,9 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 function Footer() {
   return (
     <div className="footer">
-      <div className="right">©Copyright <b> Seekh </b> 2020. All rights reserved</div>
+      <div className="right">
+        ©Copyright <b> Seekh </b> 2020. All rights reserved
+      </div>
       <div className="left">
         <div className="social">
           <a href="#">

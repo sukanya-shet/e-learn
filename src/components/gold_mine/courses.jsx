@@ -152,10 +152,10 @@ function Courses() {
       <div id="bookmarks">
         <h1 className="head">Bookmarks</h1>
       </div>
-      <div className="row d-flex align-items-center mt-4 mb-4">
+      <div className="row d-flex align-items-center mt-2 mb-2">
         <div className="row">
           {bookmark.map((n, index) => (
-            <div className="image-container d-flex justify-content-start m-3">
+            <div className="image-container d-flex col-md-3">
               <Card2
                 key={index}
                 image={n.image}
@@ -163,7 +163,6 @@ function Courses() {
                 keywords={n.keywords}
                 desc={n.desc}
                 weblink={n.weblink}
-                bookmarkComponent={RemoveBookmark}
               />
             </div>
           ))}

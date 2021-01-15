@@ -131,7 +131,7 @@ h1 {
   background: #1b2f35;
   color: #5695ad;
   cursor: pointer;
-  position: absolute;
+  position: absolute !important;
   bottom: 0px;
   border: 2px solid;
 }
@@ -142,7 +142,7 @@ h1 {
   border: none;
 }
 
-.down {
+.course-down {
   display: flex;
   flex-direction: row;
 }
@@ -206,7 +206,6 @@ h1 {
   bottom: 55px;
   right: 65px;
   color: #081316;
-  background-color: #fff;
 }
 
 .back-to-top .fas {
@@ -224,5 +223,4 @@ h1 {
   bottom: 120px;
   right: 65px;
   color: #081316;
-  background-color: #fff;
 }

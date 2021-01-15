@@ -12,13 +12,14 @@
 }
 .logo {
   margin-top: 15%;
-  font-size: 60px;
 }
 
 .logo i {
+  position:center !important;
   padding: 10px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.6);
+  font-size: 60px;
 }
 .name {
   font-size: 40px;

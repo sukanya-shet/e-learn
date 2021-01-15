@@ -1,8 +1,7 @@
 import React from "react";
 import "./reg_log.css";
 import GoogleLogin from "react-google-login";
-import FreeCourses from "../gold_mine/Gold_mine";
-import { Redirect,Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 function RegLog() {
   const [isLogin, setLogin] = React.useState(true);
@@ -62,16 +61,16 @@ function RegLog() {
   }
 
   if (userLogged) {
-    return <Redirect to="/courses" />;
+    return <Redirect to="/links" />;
   } else {
     return (
       <div class="container">
-            <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link to="/home" style={{ textDecoration: "none" }}>
           <span className="back">
-          <i class="fas fa-chevron-left"></i>
-          <span className="overlay"></span>
+            <i class="fas fa-chevron-left"></i>
+            <span className="overlay"></span>
           </span>
-          </Link>
+        </Link>
         <div class="row">
           <div class="col-md-4">
             <div class="right">
