@@ -1,7 +1,7 @@
 import React from "react";
 import "./courses.css";
 
-function Card(props) {
+function Card2(props) {
   const [isMarked, setMarked] = React.useState(false);
 
   function updateMark() {
@@ -22,11 +22,10 @@ function Card(props) {
         <div className="descrip">{props.desc}</div>
         <div className="course-down">
           <a href={props.weblink}>Go to page</a>
-          <div>{props.BookmarkComponent}</div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Card;
+export default Card2;

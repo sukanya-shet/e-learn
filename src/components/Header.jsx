@@ -33,12 +33,11 @@ function Header() {
                 <span class="nav-link">Save Links</span>
               </li>
             </Link>
-            <li class="nav-item">
-              <span class="nav-link">Assignments</span>
-            </li>
-            <li class="nav-item">
-              <span class="nav-link">Quiz</span>
-            </li>
+            <Link to="/quiz" style={{ textDecoration: "none" }}>
+              <li class="nav-item">
+                <span class="nav-link">Quiz</span>
+              </li>
+            </Link>
             <li class="nav-item">
               <span class="nav-link">Test</span>
             </li>

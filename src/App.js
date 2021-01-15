@@ -6,7 +6,9 @@ import Home from "./components/Home";
 import LinkSave from "./components/LinkSaver/LinkSave";
 import About from "./components/About";
 import { Courses } from "./components/gold_mine/courses";
-import Footer from "./components/Footer";
+import { Quiz } from "./components/Quiz/StartQuiz";
+import { EndQuiz } from "./components/Quiz/EndQuiz";
+import { PythonQ } from "./components/Quizz/PythonQ";
 import Details from "./components/Details";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { css } from "@emotion/core";
@@ -52,6 +54,8 @@ export default function App() {
               <Route path="/courses" component={Courses} />
               <Route path="/links" component={LinkSave} />
               <Route path="/details" component={Details} />
+              <Route path="/quiz" component={Quiz} />
+              <Route path="/startquiz" component={PythonQ} />
             </Switch>
           </div>
         </Router>
