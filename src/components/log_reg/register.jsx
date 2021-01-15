@@ -3,7 +3,7 @@ function Register() {
     <div className="register">
       <form method="post" onSubmit={(event) => event.preventDefault()}>
         <h1>Register</h1>
-        
+
         <input
           className="form-comp"
           type="text"

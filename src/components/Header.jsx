@@ -36,7 +36,7 @@ function Header() {
             </Link>
             <Link to="/about" style={{ textDecoration: "none" }}>
               <li class="nav-item">
-                <span class="nav-link">About us</span>
+                <span class="nav-link">Contact us</span>
               </li>
             </Link>
           </ul>
