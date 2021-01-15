@@ -1,0 +1,228 @@
+h1 {
+  margin-top: 10vh;
+}
+.gold-mine {
+  background-color: #13363f;
+  color: #efefef;
+}
+/* -----Search bar-----*/
+@import url(https://fonts.googleapis.com/css?family=Open + Sans);
+
+.gold-mine .heading {
+  font-weight: bolder;
+  font-size: 45px;
+  display: block;
+}
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid rgb(73, 119, 131);
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: rgb(73, 119, 131);
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid rgb(29, 96, 112);
+  background: rgb(73, 119, 131);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.top {
+  display: flex;
+  float: right;
+}
+.bookmark {
+  display: flex;
+  position: relative;
+  margin-left: 130px;
+}
+.wrap {
+  width: 300px;
+  position: relative;
+  top: 140px;
+  right: 5px;
+  float: right;
+  transform: translate(-50%, -50%);
+}
+
+.courses {
+  margin-top: 30px;
+}
+.col-md-4 {
+  margin-bottom: 30px;
+}
+.whiteBox {
+  margin: 20px;
+  padding: 10px;
+}
+.course-card {
+  background-color: #0d2227;
+  border-radius: 7px;
+  height: 450px;
+  width: 280px;
+  padding: 5px;
+  box-shadow: 0 3px 8px #081316;
+}
+.course-card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.course-card img {
+  width: 270px;
+}
+
+.head {
+  text-decoration: underline;
+  color: #37707e;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+.row {
+  margin-left: 35px;
+}
+.genre {
+  color: #ccbdbd;
+  justify-items: left;
+  border-bottom: 2px solid white;
+  margin-bottom: 6px;
+}
+.contents {
+  margin: 10px;
+}
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.descrip {
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-align: left;
+  color: #ccbdbd;
+}
+.course-card a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  width: 150px;
+  margin-bottom: 15px;
+  margin-left: 35px;
+  border-radius: 200px;
+  font-weight: bold;
+  background: #1b2f35;
+  color: #5695ad;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  border: 2px solid;
+}
+
+.course-card a:hover {
+  background: rgb(12, 108, 121);
+  color: #ffffff;
+  border: none;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+}
+.fas {
+  font-size: 20px;
+  float: right;
+  position: absolute;
+  left: 85%;
+  top: 91%;
+}
+
+.int-card {
+  margin-top: 25px;
+  background-color: #0d2227;
+  width: 250px;
+  min-height: 300px;
+  box-shadow: 0 2px 5px #0d2227;
+}
+.int-card .contents {
+  margin-bottom: 15px;
+}
+
+.int-card .desc {
+  margin-bottom: 10px;
+  color: #ccbdbd;
+}
+.int-card a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  width: 120px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 200px;
+  font-weight: bold;
+  background: rgb(10, 10, 10);
+  color: #1b5361;
+  cursor: pointer;
+  position: relative;
+  bottom: 5px;
+  border: 2px solid;
+}
+
+.int-card a:hover {
+  color: #0d2d35;
+  background: white;
+  border: none;
+}
+.int-card img {
+  width: 250px;
+  height: 100px;
+}
+
+.int-card:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 55px;
+  right: 65px;
+  color: #081316;
+  background-color: #fff;
+}
+
+.back-to-top .fas {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+.bookm .fas {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+.bookm {
+  position: fixed;
+  bottom: 120px;
+  right: 65px;
+  color: #081316;
+  background-color: #fff;
+}

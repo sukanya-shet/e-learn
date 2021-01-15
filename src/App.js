@@ -3,13 +3,13 @@ import "./styles.css";
 import RegLog from "./components/log_reg/reg_log";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import FreeCourses from "./components/gold_mine/Gold_mine";
 import LinkSave from "./components/LinkSaver/LinkSave";
 import About from "./components/About";
+import { Courses } from "./components/gold_mine/courses";
 import Footer from "./components/Footer";
 import Details from "./components/Details";
 import PacmanLoader from "react-spinners/PacmanLoader";
-import { css, jsx } from "@emotion/core";
+import { css } from "@emotion/core";
 
 export default function App() {
   const [loading, setLoading] = React.useState(false);
@@ -49,12 +49,11 @@ export default function App() {
               <Route path="/" exact component={Home} />
               <Route path="/home" component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/courses" component={FreeCourses} />
+              <Route path="/courses" component={Courses} />
               <Route path="/links" component={LinkSave} />
               <Route path="/details" component={Details} />
             </Switch>
           </div>
-
         </Router>
       )}
     </div>
