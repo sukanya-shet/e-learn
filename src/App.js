@@ -8,7 +8,7 @@ import About from "./components/About";
 import { Courses } from "./components/gold_mine/courses";
 import { Quiz } from "./components/Quiz/StartQuiz";
 import { EndQuiz } from "./components/Quiz/EndQuiz";
-import { PythonQ } from "./components/Quizz/PythonQ";
+import { PythonQ } from "./components/Quiz/PythonQ";
 import Details from "./components/Details";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { css } from "@emotion/core";
